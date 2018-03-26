@@ -21,10 +21,11 @@ int main()
 	{
 	printf("Enter Your Choice\n1. Insertion 2. Deletion");
 	scanf("%d", &ch);
-	
+
 	switch(ch)
 	{
-	case 1: 
+	case 1:
+	    fflush(stdin);
 	for(i=0;i<maxstk;i++)
 	{
 		printf("Enter the number u want to insert into queue");
@@ -42,12 +43,12 @@ int main()
 	case 2:
 		printf("The Deleted element is:\n");
 		popped=popnew(popstk);
-		printf("%d", popped);	
-	
+		printf("%d\n", popped);
+        break;
 	default: printf("Wrong Choice Entered\n");
 	break ;
 	}
-}		
+}
 	return 0;
 }
 void push(int* stack, int element)
